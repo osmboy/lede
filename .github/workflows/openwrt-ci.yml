@@ -146,7 +146,7 @@ jobs:
 
       - name: Compile firmware
         run: |
-          make -j$(nproc) || make -j1 package/upx/{clean,compile} V=s
+          make -j$(nproc) || make -j8 package/upx/{clean,compile} V=s
           echo "======================="
           echo "Space usage:"
           echo "======================="
