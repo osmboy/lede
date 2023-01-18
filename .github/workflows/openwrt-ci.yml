@@ -38,7 +38,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
-
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
       - name: Space cleanup
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -172,36 +173,8 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-material=y
           # CONFIG_PACKAGE_microsocks is not set
-          CONFIG_PACKAGE_python3=y
-          CONFIG_PACKAGE_python3-asyncio=y
-          CONFIG_PACKAGE_python3-base=y
-          CONFIG_PACKAGE_python3-cgi=y
-          CONFIG_PACKAGE_python3-cgitb=y
-          CONFIG_PACKAGE_python3-codecs=y
-          CONFIG_PACKAGE_python3-ctypes=y
-          CONFIG_PACKAGE_python3-dbm=y
-          CONFIG_PACKAGE_python3-decimal=y
-          CONFIG_PACKAGE_python3-distutils=y
-          CONFIG_PACKAGE_python3-email=y
-          CONFIG_PACKAGE_python3-light=y
-          CONFIG_PACKAGE_python3-logging=y
-          CONFIG_PACKAGE_python3-lzma=y
-          CONFIG_PACKAGE_python3-multiprocessing=y
-          CONFIG_PACKAGE_python3-ncurses=y
-          CONFIG_PACKAGE_python3-openssl=y
-          CONFIG_PACKAGE_python3-pydoc=y
-          CONFIG_PACKAGE_python3-readline=y
-          CONFIG_PACKAGE_python3-sqlite3=y
-          CONFIG_PACKAGE_python3-unittest=y
-          CONFIG_PACKAGE_python3-urllib=y
-          CONFIG_PACKAGE_python3-uuid=y
-          CONFIG_PACKAGE_python3-xml=y
           CONFIG_PACKAGE_qbittorrent=y
           CONFIG_PACKAGE_qos-scripts=y
-          CONFIG_PACKAGE_qt5-core=y
-          CONFIG_PACKAGE_qt5-network=y
-          CONFIG_PACKAGE_qt5-sql=y
-          CONFIG_PACKAGE_qt5-xml=y
           CONFIG_PACKAGE_rblibtorrent=y
           # CONFIG_PACKAGE_resolveip is not set
           CONFIG_PACKAGE_rpcd-mod-rpcsys=y
