@@ -207,7 +207,6 @@ jobs:
           CONFIG_boost-runtime-shared=y
           CONFIG_boost-static-and-shared-libs=y
           CONFIG_boost-variant-release=y
-
           #
           # ========================固件定制部分结束========================
           #
@@ -230,7 +229,7 @@ jobs:
 
       - name: Compile firmware
         run: |
-          make -j$(nproc) || make -j8 package/upx/{clean,compile} V=s
+          make -j$(nproc) || make -j8 V=s
           echo "======================="
           echo "Space usage:"
           echo "======================="
